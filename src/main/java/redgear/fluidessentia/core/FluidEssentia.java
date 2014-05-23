@@ -1,7 +1,12 @@
 package redgear.fluidessentia.core;
 
+import net.minecraft.block.material.Material;
+import redgear.core.block.MetaTile;
+import redgear.core.block.SubTileMachine;
 import redgear.core.fluids.FluidUtil;
 import redgear.core.mod.ModUtils;
+import redgear.fluidessentia.block.EssentiaToFluidFactory;
+import redgear.fluidessentia.block.FluidToEssentiaFactory;
 import redgear.fluidessentia.fluid.FluidAspect;
 import thaumcraft.api.aspects.Aspect;
 import cpw.mods.fml.common.Mod;
@@ -21,7 +26,9 @@ public class FluidEssentia extends ModUtils {
 	
 	@Override
 	protected void PreInit(FMLPreInitializationEvent event) {
-		// TODO Auto-generated method stub
+		MetaTile interfaces = new MetaTile(Material.rock, "EssentiaInterface");
+		interfaces.addMetaBlock(new SubTileMachine("in", "side", new EssentiaToFluidFactory()));
+		interfaces.addMetaBlock(new SubTileMachine("out", "side", new FluidToEssentiaFactory()));
 
 	}
 
