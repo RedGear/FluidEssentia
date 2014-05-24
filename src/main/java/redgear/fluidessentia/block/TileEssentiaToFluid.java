@@ -1,5 +1,8 @@
 package redgear.fluidessentia.block;
 
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidStack;
@@ -139,5 +142,4 @@ public class TileEssentiaToFluid extends TileAbstractEssentiaInterface {
 	public boolean renderExtendedTube() {
 		return false;
 	}
-
 }

@@ -2,6 +2,7 @@
 .settings
 bin
 build
+dep
 eclipse
 log.txt
 
